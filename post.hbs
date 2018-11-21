@@ -43,7 +43,34 @@
             </header>
 
             <section class="post-content">
-                {{content}}
+                {{!   {{content}}   }}
+                {{! 这部分是我自己尝试加的，如果有问题再删掉，然后再恢复上面那行的}}
+                <div class="single-post-inner">
+                    {{content}}
+                    <div class="tag-box">
+                    {{tags prefix="" separator=" "}}
+                    </div>
+                    <div class="money-like" id="like-money">
+                        <div class="reward-button">赏
+                        <span class="money-code">
+                        <span class="alipay-code">
+                            <a href="javascript:;">
+                            <img data-url="{{asset "images/qr-alipay-256.png"}}" class="alipay-img" src="data:image/gif;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="><b>支付宝打赏</b>
+                            </a>
+                        </span>
+                        <span class="wechat-code">
+                            <img data-url="{{asset "images/qr-wechat-256.png"}}" class="wechat-img" src="data:image/gif;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="><b>微信打赏</b>
+                        </span>
+                        </span>
+
+                        </div>
+                        <p class="money-notice">若你觉得我的文章对你有帮助,欢迎点击上方按钮对我打赏</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="https://encrypt.proxy.is26.com/qr?content={{url absolute="true"}}" alt="">
+                        <p>扫描二维码,分享此文章</p>
+                    </div>
+                </div>
             </section>
 
             <footer class="post-footer">
